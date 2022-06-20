@@ -197,4 +197,25 @@ public class PersonTest {
         assertEquals(result, testList);
 
     }
+    @Test
+    public void setChildren() {
+        // arrange
+
+        Person test = new Person("Josje","Bierput", "shemale", 19);
+        Person testChildren = new Person("Jantje", "Korteraar", "male", 19);
+        ArrayList testList = new ArrayList<>();
+        testList.add(testChildren);
+
+        test.setChildren(testList);
+
+        // act
+        List result = test.getChildren();
+        // assert
+        assertEquals(result, testList);
+
+    }
+
+
+
+
 }
